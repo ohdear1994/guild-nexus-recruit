@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,23 +9,25 @@ import { useToast } from '@/hooks/use-toast';
 
 const Login: React.FC = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Login Attempted",
-      description: "This is a demo. Authentication will be implemented with Discord OAuth.",
+      title: "Login Successful",
+      description: "Welcome to GuildNexus Configuration.",
     });
+    navigate('/dashboard');
   };
 
   return (
-    <div className="min-h-[calc(100vh-64px)] flex items-center justify-center py-12 px-4 bg-texture">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 bg-background">
       <div className="w-full max-w-md">
-        <Card className="wow-border bg-card/90 backdrop-blur-sm">
+        <Card className="bg-card/90 backdrop-blur-sm">
           <CardHeader className="space-y-1">
-            <CardTitle className="font-wow text-2xl text-center text-wow-gold">Welcome back</CardTitle>
+            <CardTitle className="font-wow text-2xl text-center text-wow-gold">GuildNexus</CardTitle>
             <CardDescription className="text-center">
-              Sign in to your GuildNexus account
+              Login to configure your Discord bot
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -52,28 +54,15 @@ const Login: React.FC = () => {
                   <Input id="email" placeholder="guild@example.com" required />
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <Label htmlFor="password">Password</Label>
-                    <Link to="/forgot-password" className="text-sm text-wow-gold hover:underline">
-                      Forgot password?
-                    </Link>
-                  </div>
+                  <Label htmlFor="password">Password</Label>
                   <Input id="password" type="password" required />
                 </div>
-                <Button type="submit" className="alliance-button w-full">
-                  Sign In
+                <Button type="submit" className="w-full">
+                  Login
                 </Button>
               </div>
             </form>
           </CardContent>
-          <CardFooter className="flex flex-col">
-            <div className="text-center text-sm text-muted-foreground mt-2">
-              Don't have an account?{' '}
-              <Link to="/register" className="text-wow-gold hover:underline">
-                Register
-              </Link>
-            </div>
-          </CardFooter>
         </Card>
       </div>
     </div>
