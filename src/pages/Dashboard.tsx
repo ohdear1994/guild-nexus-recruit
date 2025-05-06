@@ -19,9 +19,9 @@ const Dashboard: React.FC = () => {
   return (
     <div className="min-h-screen bg-background p-4">
       <div className="max-w-4xl mx-auto py-8">
-        <h1 className="font-wow text-3xl mb-6 text-wow-gold">Bot Configuration</h1>
+        <h1 className="font-meta text-3xl mb-6 text-meta-primary font-bold">Bot Configuration</h1>
         
-        <Card className="mb-8">
+        <Card className="mb-8 border border-meta-primary/30">
           <CardHeader>
             <CardTitle>Discord Bot Settings</CardTitle>
             <CardDescription>Configure how your recruitment bot works</CardDescription>
@@ -29,24 +29,24 @@ const Dashboard: React.FC = () => {
           <CardContent className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="server-id">Discord Server ID</Label>
-              <Input id="server-id" placeholder="Enter your Discord server ID" />
+              <Input id="server-id" placeholder="Enter your Discord server ID" className="font-meta" />
             </div>
             
             <div className="space-y-2">
               <Label htmlFor="channel-id">Recruitment Channel ID</Label>
-              <Input id="channel-id" placeholder="Enter channel ID for recruitment messages" />
+              <Input id="channel-id" placeholder="Enter channel ID for recruitment messages" className="font-meta" />
             </div>
             
             <div className="space-y-2">
               <Label htmlFor="welcome-message">Welcome Message</Label>
-              <Input id="welcome-message" placeholder="Message to send when someone applies" />
+              <Input id="welcome-message" placeholder="Message to send when someone applies" className="font-meta" />
             </div>
             
-            <Button onClick={handleSave}>Save Configuration</Button>
+            <Button onClick={handleSave} className="bg-meta-primary hover:bg-meta-secondary">Save Configuration</Button>
           </CardContent>
         </Card>
         
-        <Card>
+        <Card className="border border-meta-primary/30">
           <CardHeader>
             <CardTitle>Bot Status</CardTitle>
             <CardDescription>Current status of your Discord bot</CardDescription>
@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
               <div className="h-3 w-3 rounded-full bg-red-500 mr-2"></div>
               <span>Offline</span>
             </div>
-            <Button>Connect Bot</Button>
+            <Button className="bg-meta-primary hover:bg-meta-secondary">Connect Bot</Button>
           </CardContent>
         </Card>
       </div>

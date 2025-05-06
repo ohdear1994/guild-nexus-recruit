@@ -72,6 +72,13 @@ export default {
 					dark: "#1A1A1A",
 					light: "#F0E6D2",
 				},
+				meta: {
+					primary: "#9b87f5",
+					secondary: "#7E69AB",
+					accent: "#D6BCFA",
+					dark: "#1A1F2C",
+					light: "#FFFFFF",
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -104,7 +111,8 @@ export default {
 			},
 			fontFamily: {
 				wow: ["'Cinzel'", "serif"],
-				sans: ["'Inter'", "sans-serif"],
+				sans: ["'Poppins'", "sans-serif"],
+				meta: ["'Poppins'", "sans-serif"],
 			},
 			backgroundImage: {
 				'hero-pattern': "url('/bg-texture.png')",

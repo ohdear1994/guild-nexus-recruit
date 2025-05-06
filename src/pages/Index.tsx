@@ -19,12 +19,12 @@ const Index: React.FC = () => {
   
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <Card className="wow-border bg-card/90 backdrop-blur-sm w-full max-w-md">
+      <Card className="border border-meta-primary/50 bg-card/90 backdrop-blur-sm w-full max-w-md">
         <CardContent className="pt-6 text-center">
-          <h1 className="font-wow text-3xl mb-6 text-wow-gold">GuildNexus</h1>
-          <p className="mb-6">Redirecting to login...</p>
+          <h1 className="font-meta text-3xl mb-6 text-meta-primary font-bold">Metacruit</h1>
+          <p className="mb-6 font-meta">Redirecting to login...</p>
           <Link to="/login">
-            <Button className="wow-button">
+            <Button className="bg-meta-primary hover:bg-meta-secondary text-white font-medium">
               Login Now
             </Button>
           </Link>

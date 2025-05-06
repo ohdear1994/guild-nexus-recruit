@@ -15,7 +15,7 @@ const Login: React.FC = () => {
     e.preventDefault();
     toast({
       title: "Login Successful",
-      description: "Welcome to GuildNexus Configuration.",
+      description: "Welcome to Metacruit Configuration.",
     });
     navigate('/dashboard');
   };
@@ -23,9 +23,9 @@ const Login: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 bg-background">
       <div className="w-full max-w-md">
-        <Card className="bg-card/90 backdrop-blur-sm">
+        <Card className="bg-card/90 backdrop-blur-sm border border-meta-primary/30">
           <CardHeader className="space-y-1">
-            <CardTitle className="font-wow text-2xl text-center text-wow-gold">GuildNexus</CardTitle>
+            <CardTitle className="font-meta text-2xl text-center text-meta-primary font-bold">Metacruit</CardTitle>
             <CardDescription className="text-center">
               Login to configure your Discord bot
             </CardDescription>
@@ -51,13 +51,13 @@ const Login: React.FC = () => {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" placeholder="guild@example.com" required />
+                  <Input id="email" placeholder="email@example.com" required className="font-meta" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
-                  <Input id="password" type="password" required />
+                  <Input id="password" type="password" required className="font-meta" />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full bg-meta-primary hover:bg-meta-secondary">
                   Login
                 </Button>
               </div>
